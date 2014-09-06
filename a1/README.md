@@ -1,61 +1,37 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com)
+CS4249 Assignment 1
+==
 
-HTML5 Boilerplate is a professional front-end template for building fast,
-robust, and adaptable web apps or sites.
+### Condition Arrangement
 
-This project is the product of many years of iterative development and combined
-community knowledge. It does not impose a specific development philosophy or
-framework, so you're free to architect your code in the way that you want.
+The condition arrangement is generated from the `generate-participants.js` script inside the `js` folder. To execute it, run
+```
+$ node generate-participants.js
+```
 
-* Source: [https://github.com/h5bp/html5-boilerplate](https://github.com/h5bp/html5-boilerplate)
-* Homepage: [http://html5boilerplate.com](http://html5boilerplate.com)
-* Twitter: [@h5bp](http://twitter.com/h5bp)
+The generated condition arrangement can be found inside `js/participants.json`.
 
+### Experiment Procedure
 
-## Quick start
+1. Navigate to the root folder with `index.html` in it, simple serve that file any web server. The simplest command possible:
+```
+$ python -m SimpleHTTPServer
+```
+Navigate to [http://locahost:8000](http://localhost:8000) on your browser to view the page.
 
-Choose one of the following options:
+2. At the landing page, a brief introduction of the experiment is given. There are 6 possible participant IDs: **P1**, **P2**, **P3**, **P4**, **P5** and **P6**. Enter anyone of them in the text field and click the **Start** button.
 
-1. Download the latest stable release from
-   [html5boilerplate.com](http://html5boilerplate.com/) or a custom build from
-   [Initializr](http://www.initializr.com).
-2. Clone the git repo — `git clone
-   https://github.com/h5bp/html5-boilerplate.git` - and checkout the tagged
-   release you'd like to use.
+3. Fill up the Pre-experiment questionnaire with your information and click **Proceed**.
 
+4. The instructions screen is shown next. After reading the instructions, click **Proceed**.
 
-## Features
+5. The experiment interface will be shown. You are given a trial to try out the AutoComPaste technique and the Ctrl+C/Ctrl+V technique. When you are done with the trial, click on the **Start Experiment** button.
 
-* HTML5 ready. Use the new elements with confidence.
-* Cross-browser compatible (Chrome, Opera, Safari, Firefox 3.6+, IE6+).
-* Designed with progressive enhancement in mind.
-* Includes [Normalize.css](http://necolas.github.com/normalize.css/) for CSS
-  normalizations and common bug fixes.
-* The latest [jQuery](http://jquery.com/) via CDN, with a local fallback.
-* The latest [Modernizr](http://modernizr.com/) build for feature detection.
-* IE-specific classes for easier cross-browser control.
-* Placeholder CSS Media Queries.
-* Useful CSS helpers.
-* Default print CSS, performance optimized.
-* Protection against any stray `console.log` causing JavaScript errors in
-  IE6/7.
-* An optimized Google Analytics snippet.
-* Apache server caching, compression, and other configuration defaults for
-  Grade-A performance.
-* Cross-domain Ajax and Flash.
-* "Delete-key friendly." Easy to strip out parts you don't need.
-* Extensive inline and accompanying documentation.
+6. Use the described technique (either autocompaste or shortcuts) to copy the text into the textbox. Press the **Next Trial** button at the bottom left corner when you are done.
 
+7. At any time, you may press the **Generate CSV** button to download the experiment data to check that the data is indeed being logged. Note that for demonstration purposes, the participant ID has been hard-coded to be **P1**. This will be removed later on during the second phase of Assignment 1.
 
-## Documentation
+8. After completing the experiment, you will brought to the Post-experiment Questionnaire. Please take some time to fill it up. The saving of the pre and post experiment questionnaires has not been implemented, but it will be done in a similar fashion as the saving of experimental data.
 
-Take a look at the [documentation table of contents](doc/TOC.md). This
-documentation is bundled with the project, which makes it readily available for
-offline reading and provides a useful starting point for any documentation you
-want to write about your project.
+9. That's it. Thank you!
 
-
-## Contributing
-
-Anyone and everyone is welcome to [contribute](CONTRIBUTING.md). Hundreds of
-developers have helped make the HTML5 Boilerplate what it is today.
+Done by: [Tay Yang Shun](https://github.com/yangshun)
