@@ -46,6 +46,7 @@ textarea {
 }
 
 .right-section {
+  background-color: #232c31;
   width: calc(100% - 300px);
 }
 
