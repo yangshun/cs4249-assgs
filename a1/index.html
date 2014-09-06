@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="AutoComPaste"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,9 +25,11 @@
         <script src="js/caretposition.js"></script>
         <script src="js/base_class.js"></script>
         <script src="js/index.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
     </head>
-    <body>
+    <body ng-controller="AppController">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -41,32 +43,8 @@
             </div>
           </div><!-- /.container-fluid -->
         </nav>
-        <div class="container-fluid full-height">
-            <div class="row main-area">
-                <div class="col-md-3 left-section">
-                    <div id="Header">
-                        <div id="InstructionAreaBox">
-                            <div id="InstructionArea">
-                                <h3 id="TaskNameExperiment">
-
-                                </h3>
-                                <h2 id="ConditionNameExperiment"></h2>
-                                <h3 id="TrialNumber"></h3>
-                                <hr>
-                                <div id="InstructionText">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div id="InstructionButtonArea" class="bottom-button-container">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 right-section">
-                    <div id="Root"></div>
-                </div>
-            </div>
+        <div class="container-fluid full-height" ng-view>
+            
         </div>
 
         <script src="js/plugins.js"></script>
