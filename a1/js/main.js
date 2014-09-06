@@ -91,8 +91,6 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
 
       var endTime = (new Date()).getTime();
       var trialTime = endTime - startTime;
-      console.log('Trial Time:', trialTime);
-
       var stimuli = $('#stimuli').text();
       var response = $('#TextEditor_textArea').val();
       var row = [pid,
@@ -136,6 +134,10 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     $scope.rested = true;
     $scope.$apply()
     $scope.nextTrial();
+  }
+
+  $scope.generateCSV = function () {
+    arrayToCSV(pid, logs);
   }
 
   $scope.time = 60;
