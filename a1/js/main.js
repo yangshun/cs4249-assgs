@@ -64,7 +64,7 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
   var pid = 'P1';
   $scope.rested = false;
 
-  $http({method: 'GET', url: '/js/participants.json'}).
+  $http({method: 'GET', url: 'js/participants.json'}).
   success(function(data, status, headers, config) {
     $scope.blocks = data.data[pid];
     $scope.currentBlockNum = 0;
