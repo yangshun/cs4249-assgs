@@ -1,0 +1,38 @@
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.main-area {
+  height: calc(100% - 50px);
+  min-height: calc(100% - 50px);
+}
+
+.left-section,
+.right-section { 
+  height: 100%;
+}
+
+.left-section {
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  width: 300px;
+}
+
+.left-section .bottom-button-container {
+  background: #eee;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.right-section {
+  width: calc(100% - 300px);
+}

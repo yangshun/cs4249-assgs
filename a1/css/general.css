@@ -1,8 +1,7 @@
 body, html{
-    background-color: #93939c;
+    background-color: #1a2125;
     height: 100%;
     overflow: hidden;
-    font-family: "Arial";
     font-size: 12px;
     color: #ffffff;
     position: relative;
@@ -14,34 +13,25 @@ body, html{
 }
 
 #Header {
-    height: 200px;
+    /*height: 200px;*/
     clear: both;
     width: 100%;
 }
 
 #InstructionAreaBox {
-    margin: 0px;
-    padding: 0px;
-    height: 200px;
+    margin: 0;
+    padding: 0 15px;
+    /*height: 200px;*/
     width: 90%;
     background-color: #FFFFFF;
     color: #000000;
     float: left;
-    
 }
 
 #InstructionArea {
 
     padding: 10px;
 
-}
-
-#InstructionButtonArea {
-    width: 9%;
-    height: 200px;
-    background-color: #121a2e;
-    color: white;
-    float: right;
 }
 
 a#InstructionButton {

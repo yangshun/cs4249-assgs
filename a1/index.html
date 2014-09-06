@@ -14,16 +14,18 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>`
-
+        <link rel="stylesheet" href="css/bootstrap.flatly.min.css">
         <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css" />
-        <link rel="stylesheet" href="css/general.css" />
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/style.css">
 
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/jquery-2.0.2.min.js"></script>
         <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
         <script src="js/caretposition.js"></script>
         <script src="js/base_class.js"></script>
         <script src="js/index.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -31,26 +33,41 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="Header">
-            <div id="InstructionAreaBox">
-                <div id="InstructionArea">
-                    <div id="TaskNameExperiment">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand">CS4249 - AutoComPaste Experiment</a>
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container-fluid full-height">
+            <div class="row main-area">
+                <div class="col-md-3 left-section">
+                    <div id="Header">
+                        <div id="InstructionAreaBox">
+                            <div id="InstructionArea">
+                                <h3 id="TaskNameExperiment">
 
-                    </div>
-                    <div id="ConditionNameExperiment">
+                                </h3>
+                                <h2 id="ConditionNameExperiment"></h2>
+                                <h3 id="TrialNumber"></h3>
+                                <hr>
+                                <div id="InstructionText">
 
-                    </div>
-                    <div id="TrialNumber"></div>
-                    <div id="InstructionText">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="InstructionButtonArea" class="bottom-button-container">
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="InstructionButtonArea">
-
+                <div class="col-md-9 right-section">
+                    <div id="Root"></div>
+                </div>
             </div>
         </div>
-        <div id="Root"></div>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
