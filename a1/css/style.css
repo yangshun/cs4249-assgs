@@ -44,3 +44,26 @@ textarea {
 .right-section {
   width: calc(100% - 300px);
 }
+
+[class*="button-"] {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+
+.button-close {
+  background-color: #d90000;
+}
+
+.button-minimize {
+ background-color: #ffbf00;
+}
+
+.button-zoom {
+ background-color: #00b285;
+}
+
+.button-zoom:hover {
+  content: "\u002B";
+}
