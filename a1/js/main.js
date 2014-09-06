@@ -23,7 +23,8 @@ autoComPasteApp.config(function ($routeProvider) {
 });
 
 autoComPasteApp.controller('AppController', function ($scope, $location) {
-  $scope.pid = '123';
+  $scope.user = {}
+  $scope.user.pid = '';
 });
 
 autoComPasteApp.controller('LandingController', function ($scope, $location) {
@@ -33,7 +34,7 @@ autoComPasteApp.controller('LandingController', function ($scope, $location) {
 });
 
 autoComPasteApp.controller('PreController', function ($scope) {
-  console.log($scope.pid);
+
 });
 
 autoComPasteApp.controller('TrialController', function ($scope) {

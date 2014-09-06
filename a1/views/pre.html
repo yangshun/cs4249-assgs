@@ -1,9 +1,249 @@
-<div class="container">
+<div class="container overflow">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <h1>Pre-Experiment Questionnaire</h1>
       <hr>
-      <p>Participant's ID: {{$parent.pid}}</p>
+      <p>Please complete the following questions.</p>
+      <form class="form-horizontal well" role="form">
+        <h3>Participant Information (ID: {{$parent.user.pid}})</h3>
+        <hr>
+
+        <div class="form-group">
+          <label for="participant-name" class="col-sm-3 control-label">Name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="participant-name" placeholder="Name of participant" ng-model="$parent.user.name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="participant-gender" class="col-sm-3 control-label">Gender</label>
+            <div class="col-sm-9">
+              <select id="participant-gender" class="form-control" ng-model="$parent.user.gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="participant-age" class="col-sm-3 control-label">Age Group</label>
+            <div class="col-sm-9">
+              <select id="participant-age" class="form-control" ng-model="$parent.user.age_group">
+                <option value="<=20">&lt;= 20</option>
+                <option value="21to25">21 - 25</option>
+                <option value="26to30">26 - 30</option>
+                <option value="31to35">31 - 35</option>
+                <option value="36to40">36 - 40</option>
+                <option value="41to45">41 - 45</option>
+                <option value="46to50">46 - 50</option>
+                <option value=">50">&gt; 50</option>
+              </select>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="participant-occupation" class="col-sm-3 control-label">Occupation</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="participant-occupation" placeholder="Occupation of participant" ng-model="$parent.user.occupation">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="participant-education" class="col-sm-3 control-label">Education Level</label>
+          <div class="col-sm-9">
+            <select id="participant-education" class="form-control" ng-model="$parent.user.education_level">
+              <option value="o-level">O Levels</option>
+              <option value="a-level">A Levels</option>
+              <option value="diploma">Diploma</option>
+              <option value="bachelors">Bachelors</option>
+              <option value="masters">Masters</option>
+              <option value="phd">PhD</option>
+              <option value="none">None</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <form class="form-horizontal well" role="form">
+        <h3>Physical Condition</h3>
+        <hr>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-hand">
+              Are you right-handed or left-handed?
+            </label>
+          </div>
+          <div class="col-sm-12">
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="participant-hand" value="right" ng-model="$parent.user.hand"> Right-handed
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-hand" value="left" ng-model="$parent.user.hand"> Left-handed
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-medication">
+              Are you taking any medication?</small>
+            </label>
+          </div>
+          <div class="col-sm-12">
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="participant-medication" value="yes" ng-model="$parent.user.medication"> Yes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-medication" value="no"  ng-model="$parent.user.medication"> No
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-alcohol">
+              Have you consumed more than 2 units of alcohol within the last 6 hours? (2 units of alcohol = 1 pint of beer or 2 glasses of wine)
+            </label>
+          </div>
+          <div class="col-sm-12">
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="participant-alcohol" value="yes" ng-model="$parent.user.alcohol"> Yes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-alcohol" value="no" ng-model="$parent.user.alcohol"> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <form class="form-horizontal well" role="form">
+        <h3>Technical Experience</h3>
+        <hr>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-copy-paste-frequency">
+              How often do you copy and paste text across documents?<br><small>(1 being least often; 5 being most often)</small>
+            </label>
+          </div>
+          <div class="col-sm-12">
+            <label class="radio-inline">
+              <input type="radio" name="participant-copy-paste-frequency" value="1" ng-model="$parent.user.copy_paste_frequency"> 1
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="participant-copy-paste-frequency" value="2" ng-model="$parent.user.copy_paste_frequency"> 2
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="participant-copy-paste-frequency" value="3" ng-model="$parent.user.copy_paste_frequency"> 3
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="participant-copy-paste-frequency" value="4" ng-model="$parent.user.copy_paste_frequency"> 4
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="participant-copy-paste-frequency" value="5" ng-model="$parent.user.copy_paste_frequency"> 5
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-shortcuts-familiarity">
+              How familiar are you with keyboard shortcuts?<br><small>(1 being not familiar; 5 being extremely familiar)</small>
+            </label>
+          </div>
+
+          <div class="col-sm-12">
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="participant-shortcuts-familiarity" value="1" ng-model="$parent.user.shortcuts_familiarity"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-shortcuts-familiarity" value="2" ng-model="$parent.user.shortcuts_familiarity"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-shortcuts-familiarity" value="3" ng-model="$parent.user.shortcuts_familiarity"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-shortcuts-familiarity" value="4" ng-model="$parent.user.shortcuts_familiarity"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-shortcuts-familiarity" value="5" ng-model="$parent.user.shortcuts_familiarity"> 5
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-copy-paste-method">
+              How do you usually copy and paste text?
+            </label>
+          </div>
+
+          <div class="col-sm-12">
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="participant-copy-paste-method" value="shortcuts" ng-model="$parent.user.copy_paste_method"> Using keyboard shortcuts (Ctrl+C and Ctrl+V)
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-copy-paste-method" value="click" ng-model="$parent.user.copy_paste_method"> Use right-click
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-copy-paste-method" value="none" ng-model="$parent.user.copy_paste_method"> N.A.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-autocompaste-heard">
+              Have you heard of AutoComPaste before?
+            </label>
+          </div>
+
+          <div class="col-sm-12">
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="participant-autocompaste-heard" value="yes" ng-model="$parent.user.autocompaste_heard"> Yes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-autocompaste-heard" value="no" ng-model="$parent.user.autocompaste_heard"> No
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <label for="participant-autocompaste-used">
+              Have you used AutoComPaste before?
+            </label>
+          </div>
+
+          <div class="col-sm-12">
+            <div>
+              <label class="radio-inline">
+                <input type="radio" name="participant-autocompaste-used" value="yes" ng-model="$parent.user.autocompaste_used"> Yes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="participant-autocompaste-used" value="no"ng-model="$parent.user.autocompaste_used"> No
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </form>
+      
+      <div class="form-group">
+        <div class="col-sm-12">
+          <button type="submit" class="btn btn-default btn-lg">Proceed</button>
+        </div>
+      </div>
+
     </div>
   </div>  
 </div>

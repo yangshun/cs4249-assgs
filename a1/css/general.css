@@ -1,7 +1,5 @@
 body, html{
-    /*background-color: #1a2125;*/
-    height: 100%;
-    overflow: hidden;
+    height: 100%; 
     position: relative;
 }
 

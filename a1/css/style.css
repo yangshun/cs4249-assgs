@@ -6,6 +6,10 @@ textarea {
   color: #000;
 }
 
+.overflow {
+  overflow: scroll;
+}
+
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
