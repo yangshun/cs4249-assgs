@@ -1,0 +1,11 @@
+{
+    "data": [
+            {
+                "title": "Copy-paste Experiment",
+                "var": ["Phrase", "--Independent Variable 3--"],
+                "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
+                "Stimuli": "What is alternating current ? An electric current that rises to a maximum in one direction, falls back to zero and then rises to a maximum in the opposite direction and then repeats."
+            }
+        ]
+    
+}

@@ -1,2 +1,4 @@
 data/articles/data1.txt
+data/articles/data2.txt
 data/articles/Article_3.txt
+data/articles/Article_4.txt

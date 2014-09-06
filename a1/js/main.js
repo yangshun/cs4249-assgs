@@ -49,16 +49,42 @@ autoComPasteApp.controller('InstructionsController', function ($scope, $location
   }
 });
 
-autoComPasteApp.controller('TrialController', function ($scope, $location) {
-  $scope.message = 'Everyone come and see how good I look!';
-  runTrial(1, false);
-  var startTime = (new Date()).getTime();
-  $scope.nextTrial = function () {
-    var endTime = (new Date()).getTime();
-    console.log(endTime - startTime);
-    startTime = (new Date()).getTime();
-    runTrial(2, true);
-  }
+autoComPasteApp.controller('TrialController', function ($scope, $location, $http) {
+  
+  var pid = 'P1';
+
+  $http({method: 'GET', url: '/js/participants.json'}).
+  success(function(data, status, headers, config) {
+    $scope.blocks = data.data[pid];
+    $scope.currentBlockNum = 0;
+    $scope.currentTrialNum = 0;
+    $scope.currentBlock = $scope.blocks[$scope.currentBlockNum];
+
+    var isAutoComPaste = $scope.currentBlock.technique === 'autocompaste';
+    runTrial($scope.currentTrialNum, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
+
+    var startTime = (new Date()).getTime();
+    $scope.nextTrial = function () {
+      $scope.currentTrialNum++;
+      if ($scope.currentTrialNum >= 3) {
+        $scope.currentTrialNum = $scope.currentTrialNum%3;
+        $scope.currentBlockNum++;
+      }
+      $scope.currentBlock = $scope.blocks[$scope.currentBlockNum];
+
+      var endTime = (new Date()).getTime();
+      console.log('Timing:', endTime - startTime);
+      startTime = (new Date()).getTime();
+      
+      runTrial($scope.currentTrialNum, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
+    }
+  }).
+  error(function(data, status, headers, config) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+
+  
 });
 
 autoComPasteApp.controller('PostController', function ($scope, $location) {

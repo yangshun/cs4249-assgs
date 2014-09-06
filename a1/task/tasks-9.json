@@ -1,0 +1,11 @@
+{
+    "data": [
+            {
+                "title": "Copy-paste Experiment",
+                "var": ["Phrase", "--Independent Variable 3--"],
+                "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
+                "Stimuli": "natural difference of potential that exists"
+            }
+        ]
+    
+}
