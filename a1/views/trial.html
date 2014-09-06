@@ -1,11 +1,11 @@
 <div class="row main-area">
-    <div class="col-md-4 left-section">
+    <div class="left-section">
         <div id="Header">
             <div id="InstructionAreaBox">
                 <br>
                 <h2>Copy Paste Experiment</h2>
                 <hr>
-                <table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered" ng-show="trialOver">
                     <tr>
                         <td>Technique</td>
                         <td>{{currentBlock.technique}}</td>
@@ -23,6 +23,10 @@
                     <p>Copy the following text using the technique mentioned above.</p>
                     <div id="InstructionText"></div>
                 </div>
+                <div ng-show="!trialOver">
+                    <h4>This is a trial run. When you are ready, press the button below to start the real experiment.</h4>
+                    <button class="btn btn-danger" ng-click="start()">Start Experiment</button>
+                </div>
                 
             </div>
             <div class="bottom-button-container">
@@ -31,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-8 right-section">
+    <div class="right-section">
         <div id="Root"></div>
         <div ng-show="break && !rested">
             <h1 class="break">Take a break for a minute!</h1>

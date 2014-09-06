@@ -1,4 +1,4 @@
-function arrayToCSV(objArray) {
+function arrayToCSV(objArray) { 
     var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
     var str = '';
      

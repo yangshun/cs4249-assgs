@@ -4,7 +4,7 @@
                 "title": "Copy-paste Experiment",
                 "var": ["Phrase", "--Independent Variable 3--"],
                 "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
-                "Stimuli": "Because human–computer interaction studies a human and a machine in conjunction, it draws from supporting knowledge on both the machine and the human side. On the machine side, techniques in computer graphics, operating systems, programming languages, and development environments are relevant. On the human side, communication theory, graphic and industrial design disciplines, linguistics, social sciences, cognitive psychology, and human factors such as computer user satisfaction are relevant. Engineering and design methods are also relevant. Due to the multidisciplinary nature of HCI, people with different backgrounds contribute to its success. HCI is also sometimes referred to as man–machine interaction (MMI) or computer–human interaction (CHI)."
+                "Stimuli": "Because human–computer interaction studies a human and a machine in conjunction, it draws from supporting knowledge on both the machine and the human side. On the machine side, techniques in computer graphics, operating systems, programming languages, and development environments are relevant."
             }
         ]
     

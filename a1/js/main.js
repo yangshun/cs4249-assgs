@@ -63,6 +63,7 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
 
   var pid = 'P1';
   $scope.rested = false;
+  $scope.trialOver = false;
 
   $http({method: 'GET', url: 'js/participants.json'}).
   success(function(data, status, headers, config) {
@@ -74,9 +75,18 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     var isAutoComPaste = $scope.currentBlock.technique === 'autocompaste';
     runTrial($scope.currentTrialNum, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
 
+    $scope.start = function () {
+      $scope.trialOver = true;
+      $scope.currentBlockNum = 0;
+      $scope.currentTrialNum = 0;
+      $scope.currentBlock = $scope.blocks[$scope.currentBlockNum];
+    }
+
     var startTime = (new Date()).getTime();
     $scope.nextTrial = function () {
-      $scope.currentTrialNum++;
+      if ($scope.trialOver) {
+        $scope.currentTrialNum++;
+      } 
       if ($scope.currentTrialNum >= 3) {
         $scope.currentTrialNum = $scope.currentTrialNum%3;
         $scope.currentBlockNum++;
@@ -104,7 +114,9 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
                 stimuli == response ? 1 : 0
                 ];
 
-      logs.push(row);
+      if ($scope.trialOver) {
+        logs.push(row);
+      }
 
       startTime = (new Date()).getTime();
       runTrial($scope.currentTrialNum, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
@@ -118,15 +130,17 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
   var interval;
 
   $scope.triggerBreak = function () {
-    $('#Root').html('');
-    $scope.break = true;
-    interval = setInterval(function () {
-      $scope.time -= 1;
-      $scope.$apply();
-      if ($scope.time <= 0) {
-        $scope.endBreak();
-      }
-    }, 1000);
+    if (!$scope.break) {
+      $scope.break = true;
+      $('#Root').html('');
+      interval = setInterval(function () {
+        $scope.time -= 1;
+        $scope.$apply();
+        if ($scope.time <= 0) {
+          $scope.endBreak();
+        }
+      }, 1000);
+    }
   }
 
   $scope.endBreak = function () {
@@ -137,13 +151,13 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
   }
 
   $scope.generateCSV = function () {
-    arrayToCSV(pid, logs);
+    arrayToCSV(logs);
   }
 
   $scope.time = 60;
 });
 
 autoComPasteApp.controller('PostController', function ($scope, $location) {
-  $scope.message = 'Everyone come and see how good I look!';
+  
 });
 

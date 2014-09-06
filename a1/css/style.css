@@ -37,7 +37,8 @@ textarea {
 }
 
 .left-section,
-.right-section { 
+.right-section {
+  display: inline-block;
   height: 100%;
 }
 
@@ -45,7 +46,7 @@ textarea {
   background-color: #fff;
   position: relative;
   padding: 0;
-  width: 300px;
+  width: 400px;
 }
 
 .left-section .bottom-button-container {
@@ -59,7 +60,7 @@ textarea {
 
 .right-section {
   background-color: #232c31;
-  width: calc(100% - 300px);
+  width: calc(100% - 410px);
 }
 
 [class*="button-"] {
