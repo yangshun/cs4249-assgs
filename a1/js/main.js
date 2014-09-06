@@ -20,6 +20,10 @@ autoComPasteApp.config(function ($routeProvider) {
       templateUrl : 'views/post.html',
       controller  : 'PostController'
     })
+    .when('/thankyou', {
+      templateUrl : 'views/thankyou.html',
+      controller  : 'ThankYouController'
+    })
     .otherwise({
       templateUrl : 'views/main.html',
       controller  : 'LandingController'
@@ -158,6 +162,14 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
 });
 
 autoComPasteApp.controller('PostController', function ($scope, $location) {
-  
+  $scope.nextPage = function () {
+    $location.path('thankyou');
+  }
+});
+
+autoComPasteApp.controller('ThankYouController', function ($scope, $location) {
+  $scope.homePage = function () {
+    $location.path('/');
+  }
 });
 
