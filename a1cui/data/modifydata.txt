@@ -1,5 +1,0 @@
-data/articles/hci.txt
-data/articles/data2.txt
-data/articles/hci.txt
-data/articles/data2.txt
-data/articles/hci.txt
