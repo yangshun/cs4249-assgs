@@ -4,7 +4,7 @@
                 "title": "Copy-paste Experiment",
                 "var": ["Phrase", "--Independent Variable 3--"],
                 "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
-                "Stimuli": "What is acceptor atoms ?"
+                "Stimuli": "What is atomic number"
             },
             {
                 "title": "Copy-paste Experiment",

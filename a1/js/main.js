@@ -51,13 +51,13 @@ autoComPasteApp.controller('InstructionsController', function ($scope, $location
 
 autoComPasteApp.controller('TrialController', function ($scope, $location) {
   $scope.message = 'Everyone come and see how good I look!';
-  runTrial(1, true);
+  runTrial(1, false);
   var startTime = (new Date()).getTime();
   $scope.nextTrial = function () {
     var endTime = (new Date()).getTime();
     console.log(endTime - startTime);
     startTime = (new Date()).getTime();
-    runTrial(2, false);
+    runTrial(2, true);
   }
 });
 
