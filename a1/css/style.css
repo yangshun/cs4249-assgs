@@ -6,6 +6,18 @@ textarea {
   color: #000;
 }
 
+.break,
+.time {
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.time {
+  font-size: 50px;
+}
+
+
 .overflow {
   overflow: scroll;
 }
