@@ -1,50 +1,29 @@
 {
-    "data": {
-        "acp": [
+    "data": [
             {
                 "title": "Copy-paste Experiment",
                 "var": ["Phrase", "--Independent Variable 3--"],
                 "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
-                "Stimuli": "What is ampereaa",
+                "Stimuli": "What is acceptor atoms ?"
             },
             {
                 "title": "Copy-paste Experiment",
                 "var": ["Sentence", "--Independent Variable 3--"],
                 "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
-                "Stimuli": "This is a text from one of the open document."
+                "Stimuli": "What is acceptor atoms ?"
             },
             {
                 "title": "Copy-paste Experiment",
                 "var": ["Paragraph", "--Independent Variable 3--"],
                 "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
-                "Stimuli": "This is a text  from one of the open document. ANd this is a paragraph."
+                "Stimuli": "What is acceptor atoms ?"
             },
             {
                 "title": "Copy-paste Experiment",
                 "var": ["Paragraph", "--Independent Variable 3--"],
                 "Instruction": "Please copy-paste this phrase using AutoComPaste from one of the opened document windows",
-                "Stimuli": "This is a text  from one of the open document. ANd this is a paragraph."
-            }
-        ],
-        "xwindow": [
-            {
-                "title": "Copy-paste Experiment",
-                "var": ["Phrase", "--Independent Variable 3--"],
-                "Instruction": "Please copy-paste this phraase using keyboard shortcuts from one of the opened document windows",
-                "Stimuli": "text from one of the open document"
-            },
-            {
-                "title": "Copy-paste Experiment",
-                "var": ["Sentence", "--Independent Variable 3--"],
-                "Instruction": "Please copy-paste this phraase using keyboard shortcuts from one of the opened document windows",
-                "Stimuli": "This is a text from one of the open document."
-            },
-            {
-                "title": "Copy-paste Experiment",
-                "var": ["Paragraph", "--Independent Variable 3--"],
-                "Instruction": "Please copy-paste this phraase using keyboard shortcuts from one of the opened document windows",
-                "Stimuli": "This is a text  from one of the open document. ANd this is a paragraph."
+                "Stimuli": "What is acceptor atoms ?"
             }
         ]
-    }
+    
 }
