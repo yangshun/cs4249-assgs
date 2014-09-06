@@ -8,6 +8,10 @@ autoComPasteApp.config(function ($routeProvider) {
       templateUrl : 'views/pre.html',
       controller  : 'PreController'
     })
+    .when('/instructions', {
+      templateUrl : 'views/instructions.html',
+      controller  : 'InstructionsController'
+    })
     .when('/trial', {
       templateUrl : 'views/trial.html',
       controller  : 'TrialController'
@@ -33,16 +37,24 @@ autoComPasteApp.controller('LandingController', function ($scope, $location) {
   }
 });
 
-autoComPasteApp.controller('PreController', function ($scope) {
-
+autoComPasteApp.controller('PreController', function ($scope, $location) {
+  $scope.nextPage = function () {
+    $location.path('instructions');
+  }
 });
 
-autoComPasteApp.controller('TrialController', function ($scope) {
+autoComPasteApp.controller('InstructionsController', function ($scope, $location) {
+  $scope.nextPage = function () {
+    $location.path('trial');
+  }
+});
+
+autoComPasteApp.controller('TrialController', function ($scope, $location) {
   $scope.message = 'Everyone come and see how good I look!';
   runTrial();
 });
 
-autoComPasteApp.controller('PostController', function ($scope) {
+autoComPasteApp.controller('PostController', function ($scope, $location) {
   $scope.message = 'Everyone come and see how good I look!';
 });
 
