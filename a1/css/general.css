@@ -60,36 +60,50 @@ a#InstructionButton {
 }
 
 .windowClass {
-    background-color: #777777;
-    border: 1px solid white;
+    background-color: #fff;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
     clear: both;
     position: absolute;
+    -webkit-box-shadow: 0px 0px 35px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 35px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 35px 1px rgba(0,0,0,0.5);
+}
+
+.windowClass p {
+    color: #000;
+}
+.windowClassHandler {
+    position: static;
+    height: 30px;
+    background-color: #eee;
+    border-bottom: 1px solid #a3a3a3;
+    clear:both;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
 }
 .windowClassHandlerTitle {
-    position: static;
+    position: relative;
     float: left;
-    width: 90%;
-    background-color: blue;
-    color: white;
+    width: 100%;
+    color: #000;
     text-align: center;
-    height: 15px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
     vertical-align: 50%;
-
 }
-.windowClassHandler{
-    position: static;
-    height: 20px;
-    background-color: blue;
-    clear:both;
-
+.windowClassHandlerTitle:hover {
+    cursor: move;
 }
 .windowClassHandlerIcons{
-    position: static;
-    float: right;
-    width: 9%;
-    background-color: blue;
-    color: white;
-    height: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    color: #0000;
+    height: 30px;
 }
 .windowClassHandlerIcons div{
     position: static;
