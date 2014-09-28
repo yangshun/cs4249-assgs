@@ -141,8 +141,8 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
                 $scope.currentBlock.granularity,
                 $scope.currentBlock.windows,
                 $scope.currentBlockNum * 3 + $scope.currentTrialNum + 1,
-                $.trim(stimuli.replace(',', ' ')),
-                $.trim(response.replace(',', ' ')),
+                $.trim(stimuli.replace(/,/g, '')),
+                $.trim(response.replace(/,/g, '')),
                 trialTime,
                 stimuli == response ? 1 : 0
                 ];
