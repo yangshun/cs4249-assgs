@@ -77,7 +77,7 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     $scope.currentBlock = $scope.blocks[$scope.currentBlockNum];
 
     var isAutoComPaste = $scope.currentBlock.technique === 'autocompaste';
-    runTrial($scope.currentTrialNum, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
+    runTrial(parseInt($scope.currentBlock.windows)/2-1, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
 
     $scope.start = function () {
       $scope.trialOver = true;
@@ -87,11 +87,11 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     }
 
     var startTime = (new Date()).getTime();
-    $scope.nextTrial = function () {
+    $scope.nextTrial = function (isCallback, endTrial) {
       if ($scope.trialOver) {
         $scope.currentTrialNum++;
       }
-      if ($scope.currentTrialNum >= 3) {
+      if ($scope.currentTrialNum >= 3 && !endTrial) {
         $scope.currentTrialNum = $scope.currentTrialNum%3;
         $scope.currentBlockNum++;
         if ($scope.currentBlockNum == 9 && !$scope.rested) {
@@ -103,19 +103,15 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
       }
       $scope.currentBlock = $scope.blocks[$scope.currentBlockNum];
 
-      if ($scope.currentBlockNum * 3 + $scope.currentTrialNum == 54) {
-        arrayToCSV(logs);
-        $location.path('post');
-      }
-
       var endTime = (new Date()).getTime();
       var trialTime = endTime - startTime;
       var stimuli = $('#stimuli').text();
-      var response = $('#TextEditor_textArea').val();
+      var response = $.trim($('#TextEditor_textArea').val());
+      console.log($scope.currentBlock);
       var row = [pid,
                 $scope.currentBlock.technique,
                 $scope.currentBlock.granularity,
-                ($scope.currentTrialNum+1) * 2,
+                $scope.currentBlock.windows,
                 $scope.currentBlockNum * 3 + $scope.currentTrialNum,
                 stimuli,
                 response,
@@ -127,9 +123,21 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
         logs.push(row);
       }
 
+      if ($scope.currentBlockNum * 3 + $scope.currentTrialNum == 54) {
+        arrayToCSV(logs);
+        $location.path('post');
+        return;
+      }
+
       startTime = (new Date()).getTime();
       
-      runTrial($scope.currentTrialNum, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
+      if (!endTrial) {
+        runTrial(parseInt($scope.currentBlock.windows)/2-1, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
+      }
+
+      if (isCallback) {
+        $scope.$apply();
+      }
     }
   }).
   error(function(data, status, headers, config) {
@@ -157,7 +165,7 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     clearInterval(interval);
     $scope.rested = true;
     $scope.$apply()
-    $scope.nextTrial();
+    $scope.nextTrial(true, false);
   }
 
   $scope.generateCSV = function () {

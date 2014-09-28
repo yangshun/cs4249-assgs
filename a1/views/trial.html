@@ -1,9 +1,9 @@
-<div class="row main-area">
+<div class="row full-height">
     <div class="left-section">
         <div id="Header">
             <div id="InstructionAreaBox">
                 <br>
-                <h2>Copy Paste Experiment</h2>
+                <h4>Copy Paste Experiment</h4>
                 <hr>
                 <table class="table table-striped table-bordered" ng-show="trialOver">
                     <tr>
@@ -19,6 +19,10 @@
                         <td>{{currentBlockNum * 3 + currentTrialNum + 1}}/54</td>
                     </tr>
                 </table>
+<!--                 <pre>
+{{currentBlock}}
+                </pre>
+                <p>Current Trial Num: {{currentTrialNum}}</p> -->
                 <div id="InstructionArea">
                     <p>Copy the following text using the technique mentioned above.</p>
                     <div id="InstructionText"></div>
@@ -30,8 +34,10 @@
                 
             </div>
             <div class="bottom-button-container" ng-show="trialOver">
-                <button class="btn btn-default" ng-click="nextTrial()">Next Trial</button>
-                <button class="btn btn-default" ng-click="generateCSV()">Generate CSV</button>
+                <button class="btn btn-success" ng-click="nextTrial(false, currentBlockNum * 3 + currentTrialNum + 1 == 54)"><span ng-show="currentBlockNum * 3 + currentTrialNum + 1 != 54">Next</span>
+                <span ng-show="currentBlockNum * 3 + currentTrialNum + 1 == 54">End</span>
+                 Trial</button>
+                <button class="btn btn-warning" ng-click="generateCSV()">Generate CSV</button>
             </div>
         </div>
     </div>
@@ -40,7 +46,6 @@
         <div ng-show="break && !rested">
             <h1 class="break">Take a break for a minute!</h1>
             <h1 class="time">{{time}} seconds left</h1>
-            <button class="btn btn-default">Continue</button>
         </div>
     </div>
 </div>

@@ -13,6 +13,10 @@ textarea {
   margin-top: 50px;
 }
 
+.break {
+  margin-top: 150px;
+}
+
 .time {
   font-size: 50px;
 }
@@ -53,13 +57,19 @@ textarea {
   background: #eee;
   bottom: 0;
   border-top: 1px solid #ccc;
-  height: 60px;
+  height: 80px;
   position: absolute;
   width: 100%;
 }
 
+.left-section .bottom-button-container .btn {
+  margin: 7px;
+}
+
 .right-section {
   background-color: #232c31;
+  float: right;
+  overflow: hidden;
   width: calc(100% - 410px);
 }
 
@@ -84,4 +94,9 @@ textarea {
 
 .button-zoom:hover {
   content: "\u002B";
+}
+
+#stimuli {
+  border: 2px solid #232c31;
+  padding: 10px;
 }
