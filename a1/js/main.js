@@ -38,7 +38,10 @@ autoComPasteApp.config(function ($routeProvider) {
 });
 
 autoComPasteApp.controller('AppController', function ($scope, $location) {
-  $scope.user = {}
+  $scope.user = {
+    pre: {},
+    post: {}
+  }
   $scope.user.pid = '';
 });
 
@@ -50,6 +53,10 @@ autoComPasteApp.controller('LandingController', function ($scope, $location) {
 
 autoComPasteApp.controller('PreController', function ($scope, $location) {
   $scope.nextPage = function () {
+    var data = $scope.user.pre;
+    data.pid = $scope.user.pid;
+    var url = 'data:application/octet-stream;base64,' + Base64.encode(JSON.stringify(data));
+    window.open(url, '_blank');
     $location.path('instructions');
   }
 });
@@ -203,6 +210,10 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
 
 autoComPasteApp.controller('PostController', function ($scope, $location) {
   $scope.nextPage = function () {
+    var data = $scope.user.post;
+    data.pid = $scope.user.pid;
+    var url = 'data:application/octet-stream;base64,' + Base64.encode(JSON.stringify(data));
+    window.open(url, '_blank');
     $location.path('thankyou');
   }
 });
