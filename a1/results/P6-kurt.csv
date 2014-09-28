@@ -1,0 +1,55 @@
+participant_id,technique,granularity,open_windows,trial_no,stimuli,user_response,trial_time,accuracy
+P6,shortcuts,paragraph,2,1,transform mechanical energy,transform mechanical energy,17772,1
+P6,shortcuts,paragraph,2,2,all possible combinations,all possible combinations,13159,1
+P6,shortcuts,paragraph,2,3,size of a signal voltage,size of a signal voltage,15247,1
+P6,shortcuts,paragraph,4,4,amplifier in addition,amplifier in addition,6151,1
+P6,shortcuts,paragraph,4,5,meter used to measure,meter used to measure,8464,1
+P6,shortcuts,paragraph,4,6,positive electrode or terminal,positive electrode or terminal,10320,1
+P6,shortcuts,paragraph,6,7,transformer where the output,transformer where the output,18719,1
+P6,shortcuts,paragraph,6,8,terminal device in which emitter,terminal device in which emitter,11552,1
+P6,shortcuts,paragraph,6,9,natural difference of potential that exists,natural difference of potential that exists,9400,1
+P6,shortcuts,phrase,2,10,Device used to transform mechanical energy into AC electrical power.,Device used to transform mechanical energy into AC electrical power.,6735,1
+P6,shortcuts,phrase,2,11,The rotating or moving component of a magnetic circuit.,The rotating or moving component of a magnetic circuit.,8880,1
+P6,shortcuts,phrase,2,12,Magnitude or size of a signal voltage or current.,Magnitude or size of a signal voltage or current.,6888,1
+P6,shortcuts,phrase,4,13,A component that changes the amplitude of a signal between input and output.,A component that changes the amplitude of a signal between input and output.,12992,1
+P6,shortcuts,phrase,4,14,Spring clip on the end of a test lead used to make a temporary connection.,Spring clip on the end of a test lead used to make a temporary connection.,5551,1
+P6,shortcuts,phrase,4,15,Condition that occurs when a bridge circuit is adjusted to produce a zero output.,Condition that occurs when a bridge circuit is adjusted to produce a zero output.,7655,1
+P6,shortcuts,phrase,6,16,A device that converts a radiated electromagnetic wave into an electrical wave.,A device that converts a radiated electromagnetic wave into an electrical wave.,7856,1
+P6,shortcuts,phrase,6,17,A number system having only two symbols 0 and 1.,,696,0
+P6,shortcuts,phrase,6,18,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side.,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side.,11696,1
+P6,shortcuts,sentence,2,19,What is AC/DC ? Equipment that will operate on either an AC or DC power source.,What is AC/DC ? Equipment that will operate on either an AC or DC power source.,9487,1
+P6,shortcuts,sentence,2,20,What is active component ? A component that changes the amplitude of a signal between input and output.,What is active component ? A component that changes the amplitude of a signal between input and output.,4472,1
+P6,shortcuts,sentence,2,21,What is armstrong oscillator ? An oscillator that uses an isolation transformer to achieve positive feedback from output to input.,What is armstrong oscillator ? An oscillator that uses an isolation transformer to achieve positive feedback from output to input.,8585,1
+P6,shortcuts,sentence,4,22,What is alternating current ? An electric current that rises to a maximum in one direction falls back to zero and then rises to a maximum in the opposite direction and then repeats.,What is alternating current ? An electric current that rises to a maximum in one direction falls back to zero and then rises to a maximum in the opposite direction and then repeats.,10759,1
+P6,shortcuts,sentence,4,23,What is apparent power ? Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.,What is apparent power ? Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.,7289,1
+P6,shortcuts,sentence,4,24,What is average value ? A value of voltage or current where the area of the wave above the value equals the area of the wave below the value.,What is average value ? A value of voltage or current where the area of the wave above the value equals the area of the wave below the value.,9879,1
+P6,shortcuts,sentence,6,25,What is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.,What is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.,4440,1
+P6,shortcuts,sentence,6,26,What is bipolar junction transistor ? (BJT) A three terminal device in which emitter to collector current is controlled by base current.,What is bipolar junction transistor ? (BJT) A three terminal device in which emitter to collector current is controlled by base current.,8826,1
+P6,shortcuts,sentence,6,27,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side. On the machine side techniques in computer graphics operating systems programming languages and development environments are relevant.,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side. On the machine side techniques in computer graphics operating systems programming languages and development environments are relevant.,5789,1
+P6,autocompaste,paragraph,2,28,transform mechanical energy,transform mechanical energy,15321,1
+P6,autocompaste,paragraph,2,29,all possible combinations,all possible combinations,13616,1
+P6,autocompaste,paragraph,2,30,size of a signal voltage,size of a signal voltage,9647,1
+P6,autocompaste,paragraph,4,31,amplifier in addition,amplifier in addition,16804,1
+P6,autocompaste,paragraph,4,32,meter used to measure,meter used to measure,7272,1
+P6,autocompaste,paragraph,4,33,positive electrode or terminal,positive electrode or terminal,8600,1
+P6,autocompaste,paragraph,6,34,transformer where the output,transformer where the output,10871,1
+P6,autocompaste,paragraph,6,35,terminal device in which emitter,terminal device in which emitter,7904,1
+P6,autocompaste,paragraph,6,36,natural difference of potential that exists,natural difference of potential that exists,7856,1
+P6,autocompaste,phrase,2,37,Device used to transform mechanical energy into AC electrical power.,Device used to transform mechanical energy into AC electrical power.,5792,1
+P6,autocompaste,phrase,2,38,The rotating or moving component of a magnetic circuit.,The rotating or moving component of a magnetic circuit.,4167,1
+P6,autocompaste,phrase,2,39,Magnitude or size of a signal voltage or current.,Magnitude or size of a signal voltage or current.,3433,1
+P6,autocompaste,phrase,4,40,A component that changes the amplitude of a signal between input and output.,A component that changes the amplitude of a signal between input and output.,4368,1
+P6,autocompaste,phrase,4,41,Spring clip on the end of a test lead used to make a temporary connection.,Spring clip on the end of a test lead used to make a temporary connection.,3552,1
+P6,autocompaste,phrase,4,42,Condition that occurs when a bridge circuit is adjusted to produce a zero output.,Condition that occurs when a bridge circuit is adjusted to produce a zero output.,4040,1
+P6,autocompaste,phrase,6,43,A device that converts a radiated electromagnetic wave into an electrical wave.,A device that converts a radiated electromagnetic wave into an electrical wave.,3784,1
+P6,autocompaste,phrase,6,44,A number system having only two symbols 0 and 1.,A number system having only two symbols 0 and 1.,3408,1
+P6,autocompaste,phrase,6,45,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side.,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side.,4023,1
+P6,autocompaste,sentence,2,46,What is AC/DC ? Equipment that will operate on either an AC or DC power source.,What is AC/DC ? Equipment that will operate on either an AC or DC power source.,14648,1
+P6,autocompaste,sentence,2,47,What is active component ? A component that changes the amplitude of a signal between input and output.,What is active component ?A component that changes the amplitude of a signal between input and output.,11623,0
+P6,autocompaste,sentence,2,48,What is armstrong oscillator ? An oscillator that uses an isolation transformer to achieve positive feedback from output to input.,What is armstrong oscillator ? An oscillator that uses an isolation transformer to achieve positive feedback from output to input.,12168,1
+P6,autocompaste,sentence,4,49,What is alternating current ? An electric current that rises to a maximum in one direction falls back to zero and then rises to a maximum in the opposite direction and then repeats.,What is alternating current ? An electric current that rises to a maximum in one direction falls back to zero and then rises to a maximum in the opposite direction and then repeats.,13305,1
+P6,autocompaste,sentence,4,50,What is apparent power ? Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.,What is apparent power ? Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times.,9350,1
+P6,autocompaste,sentence,4,51,What is average value ? A value of voltage or current where the area of the wave above the value equals the area of the wave below the value.,What is average value ? A value of voltage or current where the area of the wave above the value equals the area of the wave below the value.,11712,1
+P6,autocompaste,sentence,6,52,What is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.,What is alligator clip ? Spring clip on the end of a test lead used to make a temporary connection.,8129,1
+P6,autocompaste,sentence,6,53,What is bipolar junction transistor ? (BJT) A three terminal device in which emitter to collector current is controlled by base current.,What is bipolar junction transistor ? (BJT) A three terminal device in which emitter to collector current is controlled by base current.,18380,1
+P6,autocompaste,sentence,6,54,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side. On the machine side techniques in computer graphics operating systems programming languages and development environments are relevant.,Because human%u2013computer interaction studies a human and a machine in conjunction it draws from supporting knowledge on both the machine and the human side. On the machine side techniques in computer graphics operating systems programming languages and development environments are relevant.,10364,1
