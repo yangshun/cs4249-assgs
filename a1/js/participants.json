@@ -548,7 +548,7 @@
         ],
         "P4": [
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 2,
                 "stimuli": [
@@ -558,7 +558,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 4,
                 "stimuli": [
@@ -568,7 +568,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 6,
                 "stimuli": [
@@ -578,7 +578,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 2,
                 "stimuli": [
@@ -588,7 +588,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 4,
                 "stimuli": [
@@ -598,7 +598,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 6,
                 "stimuli": [
@@ -608,7 +608,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 2,
                 "stimuli": [
@@ -618,7 +618,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 4,
                 "stimuli": [
@@ -628,7 +628,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 6,
                 "stimuli": [
@@ -638,7 +638,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 2,
                 "stimuli": [
@@ -648,7 +648,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 4,
                 "stimuli": [
@@ -658,7 +658,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 6,
                 "stimuli": [
@@ -668,7 +668,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 2,
                 "stimuli": [
@@ -678,7 +678,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 4,
                 "stimuli": [
@@ -688,7 +688,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 6,
                 "stimuli": [
@@ -698,7 +698,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 2,
                 "stimuli": [
@@ -708,7 +708,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 4,
                 "stimuli": [
@@ -718,7 +718,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 6,
                 "stimuli": [
@@ -730,7 +730,7 @@
         ],
         "P5": [
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 2,
                 "stimuli": [
@@ -740,7 +740,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 4,
                 "stimuli": [
@@ -750,7 +750,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 6,
                 "stimuli": [
@@ -760,7 +760,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 2,
                 "stimuli": [
@@ -770,7 +770,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 4,
                 "stimuli": [
@@ -780,7 +780,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 6,
                 "stimuli": [
@@ -790,7 +790,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 2,
                 "stimuli": [
@@ -800,7 +800,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 4,
                 "stimuli": [
@@ -810,7 +810,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 6,
                 "stimuli": [
@@ -820,7 +820,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 2,
                 "stimuli": [
@@ -830,7 +830,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 4,
                 "stimuli": [
@@ -840,7 +840,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 6,
                 "stimuli": [
@@ -850,7 +850,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 2,
                 "stimuli": [
@@ -860,7 +860,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 4,
                 "stimuli": [
@@ -870,7 +870,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 6,
                 "stimuli": [
@@ -880,7 +880,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 2,
                 "stimuli": [
@@ -890,7 +890,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 4,
                 "stimuli": [
@@ -900,7 +900,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 6,
                 "stimuli": [
@@ -912,7 +912,7 @@
         ],
         "P6": [
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 2,
                 "stimuli": [
@@ -922,7 +922,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 4,
                 "stimuli": [
@@ -932,7 +932,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "paragraph",
                 "windows": 6,
                 "stimuli": [
@@ -942,7 +942,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 2,
                 "stimuli": [
@@ -952,7 +952,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 4,
                 "stimuli": [
@@ -962,7 +962,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "phrase",
                 "windows": 6,
                 "stimuli": [
@@ -972,7 +972,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 2,
                 "stimuli": [
@@ -982,7 +982,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 4,
                 "stimuli": [
@@ -992,7 +992,7 @@
                 ]
             },
             {
-                "technique": "autocompaste",
+                "technique": "shortcuts",
                 "granularity": "sentence",
                 "windows": 6,
                 "stimuli": [
@@ -1002,7 +1002,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 2,
                 "stimuli": [
@@ -1012,7 +1012,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 4,
                 "stimuli": [
@@ -1022,7 +1022,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "paragraph",
                 "windows": 6,
                 "stimuli": [
@@ -1032,7 +1032,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 2,
                 "stimuli": [
@@ -1042,7 +1042,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 4,
                 "stimuli": [
@@ -1052,7 +1052,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "phrase",
                 "windows": 6,
                 "stimuli": [
@@ -1062,7 +1062,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 2,
                 "stimuli": [
@@ -1072,7 +1072,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 4,
                 "stimuli": [
@@ -1082,7 +1082,7 @@
                 ]
             },
             {
-                "technique": "shortcuts",
+                "technique": "autocompaste",
                 "granularity": "sentence",
                 "windows": 6,
                 "stimuli": [

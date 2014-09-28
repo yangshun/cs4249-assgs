@@ -15,7 +15,12 @@ var participants = {};
 for (var i = 1; i <= 6; i++) {
   var experiments = [];
   for (var j = 0; j < 2; j++) {
-    var technique = (j == 0 ? 'autocompaste' : 'shortcuts');
+    var technique;
+    if (i <= 3) {
+      technique = (j == 0 ? 'autocompaste' : 'shortcuts');
+    } else {
+      technique = (j == 0 ? 'shortcuts' : 'autocompaste');
+    }
     for (var k = 0; k < 3; k++) {
       var gran = granularity[(i-1)%3][k];
       for (var m = 0; m < 3; m++) {
