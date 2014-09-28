@@ -51,12 +51,23 @@ autoComPasteApp.controller('LandingController', function ($scope, $location) {
   }
 });
 
+function createJSONFile(fileName, fileContent) {
+  var download = document.createElement('a');
+  download.download = fileName;
+  download.href = fileContent;
+  $('body').append(download);
+  download.click();
+  $(download).remove();
+}
+
 autoComPasteApp.controller('PreController', function ($scope, $location) {
   $scope.nextPage = function () {
     var data = $scope.user.pre;
     data.pid = $scope.user.pid;
-    var url = 'data:application/octet-stream;base64,' + Base64.encode(JSON.stringify(data));
-    window.open(url, '_blank');
+
+    var fileName = $scope.user.pid + '-pre.json';
+    var fileContent = 'data:application/octet-stream;base64,' + Base64.encode(JSON.stringify(data));
+    createJSONFile(fileName, fileContent);
     $location.path('instructions');
   }
 });
@@ -212,8 +223,9 @@ autoComPasteApp.controller('PostController', function ($scope, $location) {
   $scope.nextPage = function () {
     var data = $scope.user.post;
     data.pid = $scope.user.pid;
-    var url = 'data:application/octet-stream;base64,' + Base64.encode(JSON.stringify(data));
-    window.open(url, '_blank');
+    var fileName = $scope.user.pid + '-post.json';
+    var fileContent = 'data:application/octet-stream;base64,' + Base64.encode(JSON.stringify(data)); 
+    createJSONFile(fileName, fileContent);
     $location.path('thankyou');
   }
 });
