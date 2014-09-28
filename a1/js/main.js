@@ -54,16 +54,20 @@ autoComPasteApp.controller('InstructionsController', function ($scope, $location
 });
 
 autoComPasteApp.controller('TrialController', function ($scope, $location, $http) {
-  var logs = [[ 'participant_id',
-                'technique',
-                'granularity',
-                'open_windows',
-                'trial_no',
-                'stimuli',
-                'user_response',
-                'trial_time',
-                'accuracy'
-                ]];
+  $scope.time = 2;
+
+  var logs = [];
+  var logsHeaders = [ 'participant_id',
+                      'technique',
+                      'granularity',
+                      'open_windows',
+                      'trial_no',
+                      'stimuli',
+                      'user_response',
+                      'trial_time',
+                      'accuracy'
+                      ];
+  logs.push(logsHeaders);
 
   var pid = 'P1';
   $scope.rested = false;
@@ -78,12 +82,21 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
 
     var isAutoComPaste = $scope.currentBlock.technique === 'autocompaste';
     runTrial(parseInt($scope.currentBlock.windows)/2-1, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
+    
+    $('#TextEditor_textArea').addClass('mousetrap');
+    Mousetrap.bind('meta+enter', function(e) {
+      if ($scope.trialOver) {
+        $scope.nextTrial(false, $scope.currentBlockNum * 3 + $scope.currentTrialNum + 1 == 54);
+      }
+      return false;
+    });
 
     $scope.start = function () {
       $scope.trialOver = true;
       $scope.currentBlockNum = 0;
       $scope.currentTrialNum = 0;
       $scope.currentBlock = $scope.blocks[$scope.currentBlockNum];
+      $('#TextEditor_textArea').val('');
     }
 
     var startTime = (new Date()).getTime();
@@ -107,14 +120,13 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
       var trialTime = endTime - startTime;
       var stimuli = $('#stimuli').text();
       var response = $.trim($('#TextEditor_textArea').val());
-      console.log($scope.currentBlock);
       var row = [pid,
                 $scope.currentBlock.technique,
                 $scope.currentBlock.granularity,
                 $scope.currentBlock.windows,
                 $scope.currentBlockNum * 3 + $scope.currentTrialNum,
-                stimuli,
-                response,
+                $.trim(stimuli.replace(',', ' ')),
+                $.trim(response.replace(',', ' ')),
                 trialTime,
                 stimuli == response ? 1 : 0
                 ];
@@ -132,12 +144,15 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
       startTime = (new Date()).getTime();
       
       if (!endTrial) {
+        var isAutoComPaste = $scope.currentBlock.technique === 'autocompaste';
         runTrial(parseInt($scope.currentBlock.windows)/2-1, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
       }
 
       if (isCallback) {
         $scope.$apply();
       }
+
+      $('#TextEditor_textArea').focus();
     }
   }).
   error(function(data, status, headers, config) {
@@ -146,7 +161,6 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
   });
 
   var interval;
-
   $scope.triggerBreak = function () {
     if (!$scope.break) {
       $scope.break = true;
@@ -171,8 +185,6 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
   $scope.generateCSV = function () {
     arrayToCSV(logs);
   }
-
-  $scope.time = 2;
 });
 
 autoComPasteApp.controller('PostController', function ($scope, $location) {

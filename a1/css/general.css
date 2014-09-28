@@ -25,12 +25,6 @@ body, html{
     float: left;
 }
 
-#InstructionArea {
-
-    padding: 10px;
-
-}
-
 a#InstructionButton {
     width: 50px;
     color: white;
