@@ -102,7 +102,7 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     runTrial(parseInt($scope.currentBlock.windows)/2-1, $scope.currentBlock.stimuli[$scope.currentTrialNum], isAutoComPaste);
     
     $('#TextEditor_textArea').addClass('mousetrap');
-    Mousetrap.bind('meta+enter', function(e) {
+    Mousetrap.bind(['shift+enter'], function(e) {
       if ($scope.trialOver) {
         $scope.nextTrial(true, $scope.currentBlockNum * 3 + $scope.currentTrialNum + 1 == 54);
       }
