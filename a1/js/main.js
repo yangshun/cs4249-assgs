@@ -1,5 +1,12 @@
 
-var autoComPasteApp = angular.module('AutoComPaste', ['ngRoute']);
+var autoComPasteApp = angular.module('AutoComPaste', ['ngRoute']).
+  filter('capitalize', function() {
+    return function(input, all) {
+      return (!!input) ? input.replace(/([^\W_]+[^\s-]*) */g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }) : '';
+    }
+  });;
 
 // configure our routes
 autoComPasteApp.config(function ($routeProvider) {
@@ -69,7 +76,11 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
                       ];
   logs.push(logsHeaders);
 
-  var pid = 'P1';
+  var pid = $scope.user.pid;
+  if (!pid) {
+    pid = 'P1';
+  }
+
   $scope.rested = false;
   $scope.trialOver = false;
 
@@ -86,7 +97,7 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     $('#TextEditor_textArea').addClass('mousetrap');
     Mousetrap.bind('meta+enter', function(e) {
       if ($scope.trialOver) {
-        $scope.nextTrial(false, $scope.currentBlockNum * 3 + $scope.currentTrialNum + 1 == 54);
+        $scope.nextTrial(true, $scope.currentBlockNum * 3 + $scope.currentTrialNum + 1 == 54);
       }
       return false;
     });
@@ -101,6 +112,27 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
 
     var startTime = (new Date()).getTime();
     $scope.nextTrial = function (isCallback, endTrial) {
+
+      var endTime = (new Date()).getTime();
+      var trialTime = endTime - startTime;
+      var stimuli = $('#stimuli').text();
+      var response = $.trim($('#TextEditor_textArea').val());
+      console.log($scope.currentBlock);
+      var row = [pid,
+                $scope.currentBlock.technique,
+                $scope.currentBlock.granularity,
+                $scope.currentBlock.windows,
+                $scope.currentBlockNum * 3 + $scope.currentTrialNum + 1,
+                $.trim(stimuli.replace(',', ' ')),
+                $.trim(response.replace(',', ' ')),
+                trialTime,
+                stimuli == response ? 1 : 0
+                ];
+
+      if ($scope.trialOver) {
+        logs.push(row);
+      }
+
       if ($scope.trialOver) {
         $scope.currentTrialNum++;
       }
@@ -116,26 +148,8 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
       }
       $scope.currentBlock = $scope.blocks[$scope.currentBlockNum];
 
-      var endTime = (new Date()).getTime();
-      var trialTime = endTime - startTime;
-      var stimuli = $('#stimuli').text();
-      var response = $.trim($('#TextEditor_textArea').val());
-      var row = [pid,
-                $scope.currentBlock.technique,
-                $scope.currentBlock.granularity,
-                $scope.currentBlock.windows,
-                $scope.currentBlockNum * 3 + $scope.currentTrialNum,
-                $.trim(stimuli.replace(',', ' ')),
-                $.trim(response.replace(',', ' ')),
-                trialTime,
-                stimuli == response ? 1 : 0
-                ];
-
-      if ($scope.trialOver) {
-        logs.push(row);
-      }
-
       if ($scope.currentBlockNum * 3 + $scope.currentTrialNum == 54) {
+        $scope.endTrial = true;
         arrayToCSV(logs);
         $location.path('post');
         return;

@@ -8,11 +8,11 @@
                 <table class="table table-striped table-bordered" ng-show="trialOver">
                     <tr>
                         <td>Technique</td>
-                        <td>{{currentBlock.technique}}</td>
+                        <td>{{{autocompaste: 'AutoComPaste', shortcuts: 'Keyboard Shortcuts'}[currentBlock.technique]}}</td>
                     </tr>
                     <tr>
                         <td>Granularity</td>
-                        <td>{{currentBlock.granularity}}</td>
+                        <td>{{currentBlock.granularity | capitalize}}</td>
                     </tr>
                     <tr>
                         <td>Trial No.</td>
