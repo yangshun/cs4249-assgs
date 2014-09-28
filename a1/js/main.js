@@ -129,13 +129,15 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
     }
 
     var startTime = (new Date()).getTime();
-    $scope.nextTrial = function (isCallback, endTrial) {
-
+    $scope.nextTrial = function (isCallback, endTrial, resumeFromBreak) {
+      if ($scope.break) {
+        return;
+      }
       var endTime = (new Date()).getTime();
       var trialTime = endTime - startTime;
       var stimuli = $('#stimuli').text();
       var response = $.trim($('#TextEditor_textArea').val());
-      console.log($scope.currentBlock);
+
       var row = [pid,
                 $scope.currentBlock.technique,
                 $scope.currentBlock.granularity,
@@ -146,8 +148,8 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
                 trialTime,
                 stimuli == response ? 1 : 0
                 ];
-
-      if ($scope.trialOver) {
+      resumeFromBreak = !!resumeFromBreak;
+      if ($scope.trialOver && !resumeFromBreak) {
         logs.push(row);
       }
 
@@ -209,9 +211,10 @@ autoComPasteApp.controller('TrialController', function ($scope, $location, $http
 
   $scope.endBreak = function () {
     clearInterval(interval);
+    $scope.break = false;
     $scope.rested = true;
     $scope.$apply()
-    $scope.nextTrial(true, false);
+    $scope.nextTrial(true, false, true);
   }
 
   $scope.generateCSV = function () {
