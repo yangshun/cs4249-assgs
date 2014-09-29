@@ -10,6 +10,12 @@ var granularity = {
   '2': ['paragraph', 'phrase', 'sentence']
 }
 
+var tasks = {
+  phrase: 0,
+  sentence: 9,
+  paragraph: 18
+}
+
 var participants = {};
 
 for (var i = 1; i <= 6; i++) {
@@ -25,7 +31,7 @@ for (var i = 1; i <= 6; i++) {
       var gran = granularity[(i-1)%3][k];
       for (var m = 0; m < 3; m++) {
         var windows = (m+1) * 2;
-        var bs = k*9 + m*3;
+        var bs = tasks[gran] + m*3;
         var exp = {
           technique: technique,
           granularity: gran,
