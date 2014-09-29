@@ -79,7 +79,7 @@ autoComPasteApp.controller('InstructionsController', function ($scope, $location
 });
 
 autoComPasteApp.controller('TrialController', function ($scope, $location, $http) {
-  $scope.time = 2;
+  $scope.time = 60;
 
   var logs = [];
   var logsHeaders = [ 'participant_id',
