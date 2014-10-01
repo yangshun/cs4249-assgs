@@ -1,0 +1,10 @@
+granularity,open_windows,shortcut_accuracy,acp_accuracy,difference
+phrase,2,1.0,0.944,0.056
+phrase,4,1.0,1.0,0.0
+phrase,6,1.0,0.889,0.111
+sentence,2,1.0,1.0,0.0
+sentence,4,1.0,1.0,0.0
+sentence,6,0.944,1.0,-0.056
+paragraph,2,1.0,0.556,0.444
+paragraph,4,1.0,0.722,0.278
+paragraph,6,1.0,0.778,0.222

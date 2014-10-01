@@ -1,6 +1,16 @@
 CS4249 Assignment 1
 ==
 
+### Pre-Experiment Questionnaire
+
+The pre-experiment questionnaire can be found on the following page: [http://yangshun.im/cs4249-assgs/a1/#/pre](http://yangshun.im/cs4249-assgs/a1/#/pre).
+A consolidated version of the pre-experiment questionnaire results can be found in the `results-processed/pre/pre-expt-questionnaire.csv`.
+
+### Post-Experiment Questionnaire
+
+The post-experiment questionnaire can be found on the following page: [http://yangshun.im/cs4249-assgs/a1/#/post](http://yangshun.im/cs4249-assgs/a1/#/post).
+A consolidated version of the post-experiment questionnaire results can be found in the `results-processed/post/post-expt-questionnaire.csv`.
+
 ### Condition Arrangement
 
 The condition arrangement is generated from the `generate-participants.js` script inside the `js` folder. To execute it, run
@@ -24,13 +34,13 @@ Navigate to [http://locahost:8000](http://localhost:8000) on your browser to vie
 
 4. The instructions screen is shown next. After reading the instructions, click **Proceed**.
 
-5. The experiment interface will be shown. You are given a trial to try out the AutoComPaste technique and the Ctrl+C/Ctrl+V technique. When you are done with the trial, click on the **Start Experiment** button.
+5. The experiment interface will be shown. You are given a trial to try out the AutoComPaste technique and the traditional keyboard shortcuts technique. When you are done with the trial, click on the **Start Experiment** button.
 
-6. Use the described technique (either autocompaste or shortcuts) to copy the text into the textbox. Press the **Next Trial** button at the bottom left corner when you are done.
+6. Use the described technique (either autocompaste or shortcuts) to copy the text into the textbox. Use the `Shift`+`Enter` shortcut or press the **Next Trial** button on the bottom left corner of the screen when you are done.
 
-7. At any time, you may press the **Generate CSV** button to download the experiment data to check that the data is indeed being logged. Note that for demonstration purposes, the participant ID has been hard-coded to be **P1**. This will be removed later on during the second phase of Assignment 1.
+7. At any time, you may press the **Generate CSV** button to download the experiment data to check that the data is indeed being logged.
 
-8. After completing the experiment, you will brought to the Post-experiment Questionnaire. Please take some time to fill it up. The saving of the pre and post experiment questionnaires has not been implemented, but it will be done in a similar fashion as the saving of experimental data.
+8. After completing the experiment, click on "End Experiment". You will brought to the Post-experiment Questionnaire. Please take some time to fill it up.
 
 9. That's it. Thank you!
 

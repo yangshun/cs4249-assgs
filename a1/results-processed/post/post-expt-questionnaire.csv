@@ -1,0 +1,10 @@
+pid,ease_of_use_autocompaste,ease_of_use_shortcuts,efficiency,use_acp_without_guidance,learned_acp_easily,use_acp_future_work,experiment_difficulties,experiment_effectiveness,experiment_feedback
+P1,1,4,2,2,5,3,AutoComPaste is a laudable initiative with potential to help in the future. Right now it resembles poorly formatted grammar help coded hastily. The spaces before and after question marks etc. Takes a bit getting used to.,Yes. Effective.,"Keep up the good work. Id use this in the future if it were cleaner. Im not a coder, but it seems ""buggy""/glitchy? 
+Wouldnt fly in the Apple App store."
+P2,4,4,4,3,3,2,BUGS,Yes,
+P3,2,4,3,3,3,2,The autocompaste library has weird behaviour in some ways,Yes,
+P4,4,4,4,4,5,4,No,Yes,Bug with dropdown for AutoComPaste. Could not click on the dropdown list to select the text to paste.
+P5,4,3,4,4,4,4,No,No,No
+P6,5,3,4,4,5,5,The spacing problem sucks!,I think so? :P,<3
+Mean,3.333,3.667,3.5,3.333,4.167,3.333,-,-,-
+SD,1.374,0.471,0.764,0.745,0.898,1.106,-,-,-

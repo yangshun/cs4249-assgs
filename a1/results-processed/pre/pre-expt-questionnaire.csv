@@ -1,0 +1,7 @@
+pid,name,gender,age,occupation,education_level,hand,medication,alcohol,computer_usage,copy_paste_frequency,shortcuts_familiarity,shortcuts_usage,copy_paste_method,autocompaste_heard,autocompaste_used
+P1,Bhav,male,25,STUDent,bachelors,right,no,no,5-6,3,3,3,shortcuts,no,no
+P2,Chua Wei Kuan,male,24,Developer,bachelors,right,no,no,>6,5,4,5,shortcuts,no,no
+P3,Ming,male,28,-,bachelors,right,no,no,3-4,3,3,3,shortcuts,no,no
+P4,Shuling,female,23,Student,a-level,right,no,no,>6,3,3,5,shortcuts,no,no
+P5,Liyue,female,22,student,a-level,right,no,no,1-2,5,3,3,shortcuts,no,no
+P6,Kurt Tanyu,male,24,Student,a-level,right,no,no,>6,2,2,2,shortcuts,no,no
